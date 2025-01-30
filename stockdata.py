@@ -962,8 +962,8 @@ def plot_feature_progression(dataset_generator, feature_name='total_log_return',
     
 # Example Usage
 if __name__ == "__main__":
-    API_KEY = "AKUXM8FH9NXFHBMBJ42M"
-    API_SECRET = "OfnzmCT4lafIAnQySAtGLGg7buWN0y2CIufYGVwh"
+    API_KEY = os.getenv("ALPACA_API_KEY")
+    API_SECRET = os.getenv("ALPACA_API_SECRET")
     BASE_URL = os.getenv("APCA_API_BASE_URL", "https://paper-api.alpaca.markets")
 
     stock_data = StockData(API_KEY, API_SECRET, BASE_URL)
